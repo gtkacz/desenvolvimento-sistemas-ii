@@ -1,0 +1,16 @@
+@startuml usecase
+    ' left to right direction
+
+    actor Jogador
+    actor "Organizador de partida" as Organizador
+
+    Jogador --> (Encontrar partidas)
+    Jogador --> (Inscrever em uma partida)
+    Jogador --> (Avaliar jogadores)
+
+    Jogador --> (Criar uma partida)
+    Organizador --> (Criar uma partida)
+
+    Organizador --> (Gerenciar a lista de jogadores)
+    Organizador --> (Cancelar uma partida)
+@enduml
