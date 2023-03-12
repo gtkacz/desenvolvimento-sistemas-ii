@@ -3,30 +3,31 @@
     skinparam classAttributeIconSize 0
 
     class Jogador {
-        +nome
-        +telefone
-        +localização
-        +posição
-        +partidas
+        +nome : str
+        +telefone : str
+        +localização : str
+        +posição : str
+        +partidas : array[Partida]
         +encontrarPartidas()
         +entrarPartida()
         +avaliarJogador()
     }
 
     class Organizador {
-        +nome
-        +telefone
-        +partidas
+        +nome : str
+        +telefone : str
+        +partidas : array[Partida]
         +criarPartida()
         +cancelarPartida()
         +gerenciarjogadores()
     }
 
     class Partida {
-        +localização
-        +horário
-        +status
-        +jogadores
+        +localização : str
+        +horário : DateTime
+        +status : bool
+        +jogadores : array[Jogador]
+        +organizador : Organizador
         +addJogador()
         +removerJogador()
         +getJogadores()
